@@ -1,9 +1,9 @@
 import React from "react";
-import { Login as LoginComponent } from "../components/assests/Login";
+import Login from "../components/assests/Login";
 function LoginPage() {
   return (
     <div className="py-8">
-      <LoginComponent />
+      <Login />
     </div>
   );
 }

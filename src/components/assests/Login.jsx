@@ -3,7 +3,9 @@ import { Link, useNavigation } from "react-router-dom";
 
 import { login as authLogin } from "../../store/authSlice";
 
-import { Butoon, Input, Logo } from "../index";
+// import Butoon from "../index";
+import Input from "../assests/Input";
+import { Logo } from "../index";
 
 import { useDispatch } from "react-redux";
 
@@ -11,7 +13,7 @@ import { useForm } from "react-hook-form";
 
 import authService from "../../appwrite/auth";
 
-import Button from '../assests/Button'
+import Button from "../assests/Button";
 
 function Login() {
   const navigate = useNavigation();
@@ -78,7 +80,9 @@ function Login() {
                 required: true,
               })}
             />
-            <Button type="submit" className="w-full">Sign In</Button>
+            <Button type="submit" className="w-full">
+              Sign In
+            </Button>
           </div>
         </form>
       </div>
