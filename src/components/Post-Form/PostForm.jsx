@@ -1,9 +1,10 @@
 import React, { useCallback, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import  Button  from "../../components/assests/Button";
-// import  Logo  from "../assests/Logo";
-// import { Logout } from "../Header/LogoutBtn";
-import RTE from "../RTE";
+import Button from "../index";
+import  Input  from "../index";
+import  RTE  from "../index";
+import  Select  from "../index";
+
 import appwriteService from "../../appwrite/config";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";

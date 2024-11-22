@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import appwriteService from "../appwrite/config";
-import Container from "../components/container/Container";
-import PostCard from "../components/assests/PostCard";
+import  Container from '../components'
+import  PostCard  from '../components'
+
+
 
 function AllPostPage() {
   const [post, setPost] = use([]);
