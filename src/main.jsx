@@ -5,21 +5,17 @@ import './index.css'
 import { Provider } from 'react-redux'
 import store from './store/store.js'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-
+import Home from './pages/Home.jsx'
 import { AuthLayout, Login } from './components/index.js'
 
 
+import AddPost from "./pages/AddPost";
+import Signup from './pages/Signup'
+import EditPost from "./pages/EditPost";
 
-import HomePage from "./Pages/HomePage.jsx";
-import LoginPage from "./Pages/LoginPage.jsx";
-import SignupPage from "./Pages/SignupPage.jsx";
-import AllPostPage from "./Pages/AllPostPage.jsx";
-import AddPostPage from "./Pages/AddPostPage.jsx";
-import EditPostPage from "./Pages/EditPostPage.jsx";
-import PostPage from "./Pages/PostPage.jsx";
+import Post from "./pages/Post";
 
-// import Protected from "./components/AuthLayout.jsx";
-
+import AllPosts from "./pages/AllPosts";
 
 const router = createBrowserRouter([
   {
@@ -28,13 +24,13 @@ const router = createBrowserRouter([
     children: [
         {
             path: "/",
-            element: <HomePage />,
+            element: <Home />,
         },
         {
             path: "/login",
             element: (
                 <AuthLayout authentication={false}>
-                    <LoginPage />
+                    <Login />
                 </AuthLayout>
             ),
         },
@@ -42,7 +38,7 @@ const router = createBrowserRouter([
             path: "/signup",
             element: (
                 <AuthLayout authentication={false}>
-                    <SignupPage />
+                    <Signup />
                 </AuthLayout>
             ),
         },
@@ -51,7 +47,7 @@ const router = createBrowserRouter([
             element: (
                 <AuthLayout authentication>
                     {" "}
-                    <AllPostPage />
+                    <AllPosts />
                 </AuthLayout>
             ),
         },
@@ -60,7 +56,7 @@ const router = createBrowserRouter([
             element: (
                 <AuthLayout authentication>
                     {" "}
-                    <AddPostPage />
+                    <AddPost />
                 </AuthLayout>
             ),
         },
@@ -69,13 +65,13 @@ const router = createBrowserRouter([
             element: (
                 <AuthLayout authentication>
                     {" "}
-                    <EditPostPage />
+                    <EditPost />
                 </AuthLayout>
             ),
         },
         {
             path: "/post/:slug",
-            element: <PostPage />,
+            element: <Post />,
         },
     ],
 },
